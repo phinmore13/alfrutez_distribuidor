@@ -6,15 +6,12 @@
     <title>ALFRUTEZ | Infraestructura de Abastecimiento</title>
     <meta name="description" content="ALFRUTEZ garantiza la continuidad operativa de supermercados y empresas procesadoras mediante un abastecimiento confiable de aguacate.">
     
-    <!-- Tipografía Inter (Estilo Apple / Stripe) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuración personalizada de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -39,7 +36,6 @@
         }
     </script>
 
-    <!-- Estilos para animaciones (Reveal y Carrusel Marquee) -->
     <style>
         .reveal {
             opacity: 0;
@@ -68,7 +64,6 @@
 </head>
 <body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-accent selection:text-white">
 
-    <!-- NAVEGACIÓN -->
     <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-white/70 border-b border-black/5" id="navbar">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="text-xl font-bold tracking-tighter">ALFRUTEZ<span class="text-brand-accent">.</span></div>
@@ -76,10 +71,8 @@
         </div>
     </nav>
 
-    <!-- BLOQUE 1: HERO -->
     <section class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 px-6 overflow-hidden bg-grid">
         <div class="max-w-7xl mx-auto text-center reveal">
-            <!-- Etiqueta superior -->
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-medium text-brand-gray mb-8">
                 <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
                 Operación activa y en cumplimiento
@@ -103,7 +96,6 @@
             </div>
         </div>
 
-        <!-- Imagen Editorial -->
         <div class="max-w-6xl mx-auto mt-24 reveal relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-zinc-400 rounded-2xl blur opacity-20 transition duration-1000 group-hover:opacity-30"></div>
             <div class="relative aspect-video bg-zinc-200 rounded-xl border border-zinc-300 overflow-hidden flex items-center justify-center">
@@ -117,7 +109,6 @@
         </div>
     </section>
 
-    <!-- BLOQUE 1.5: SOMOS (CARRUSEL INFINITO) -->
     <section class="py-32 bg-white border-b border-zinc-100 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-6 mb-16 reveal">
             <h3 class="text-sm font-bold text-zinc-400 tracking-widest uppercase mb-4">Autoridad Corporativa</h3>
@@ -126,7 +117,6 @@
             </h2>
         </div>
 
-        <!-- Contenedor del Carrusel -->
         <div class="relative flex overflow-hidden group reveal" style="transition-delay: 0.1s;">
             <div class="absolute top-0 left-0 h-full w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
             <div class="absolute top-0 right-0 h-full w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
@@ -182,7 +172,6 @@
                 </div>
             </div>
 
-            <!-- Set Duplicado -->
             <div class="flex gap-6 pr-6 animate-scroll-horizontal group-hover:[animation-play-state:paused]" aria-hidden="true">
                 
                 <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
@@ -237,85 +226,17 @@
         </div>
     </section>
 
-    <!-- BLOQUE 2: DOS INDUSTRIAS -->
-    <section class="py-32 bg-white relative border-b border-zinc-100">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-brand-dark text-white px-6 py-3 rounded-full text-sm font-medium shadow-2xl whitespace-nowrap reveal">
-                Diferentes operaciones. La misma necesidad: Un abastecimiento confiable.
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0">
-                
-                <div class="lg:pr-24 lg:border-r border-zinc-200 reveal">
-                    <h3 class="text-sm font-bold text-zinc-400 tracking-widest uppercase mb-4">Perfil I: Retail</h3>
-                    <h2 class="text-3xl font-bold mb-6 text-brand-dark">Supermercados</h2>
-                    <p class="text-zinc-500 mb-8 leading-relaxed">
-                        Entendemos que una góndola vacía o un producto deficiente afecta directamente su ticket promedio y la lealtad del consumidor.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-zinc-700">
-                            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Mitigación drástica de la merma.
-                        </li>
-                        <li class="flex items-center gap-3 text-zinc-700">
-                            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Consistencia visual para el consumidor final.
-                        </li>
-                        <li class="flex items-center gap-3 text-zinc-700">
-                            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Cumplimiento estricto en ventanas de entrega.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="lg:hidden flex justify-center py-8 reveal">
-                    <div class="bg-brand-dark text-white px-6 py-3 rounded-full text-xs text-center font-medium shadow-xl">
-                        Diferentes operaciones.<br>La misma necesidad de confianza.
-                    </div>
-                </div>
-
-                <div class="lg:pl-24 reveal" style="transition-delay: 0.2s;">
-                    <h3 class="text-sm font-bold text-zinc-400 tracking-widest uppercase mb-4">Perfil II: Procesamiento</h3>
-                    <h2 class="text-3xl font-bold mb-6 text-brand-dark">Industria Alimentaria</h2>
-                    <p class="text-zinc-500 mb-8 leading-relaxed">
-                        Sabemos que detener una línea de producción por falta de materia prima no es una opción. Su planeación requiere certeza absoluta.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-zinc-700">
-                            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Garantía de volumen para continuidad de producción.
-                        </li>
-                        <li class="flex items-center gap-3 text-zinc-700">
-                            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Disponibilidad estable frente a fluctuaciones de mercado.
-                        </li>
-                        <li class="flex items-center gap-3 text-zinc-700">
-                            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Especificaciones técnicas consistentes.
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- BLOQUE 3: LA DIFERENCIA ENTRE AMBOS SEGMENTOS (REEMPLAZADO) -->
     <section class="py-32 bg-brand-light px-6">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 reveal text-center">
                 <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-brand-dark mb-4">La diferencia entre ambos segmentos</h2>
             </div>
 
-            <!-- Contenedor Padre para Focus Shift -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 group/cards reveal">
                 
-                <!-- Tarjeta 1: Supermercados -->
                 <div class="bg-white p-10 rounded-2xl border border-zinc-200 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl group-hover/cards:opacity-50 group-hover/cards:grayscale hover:!opacity-100 hover:!grayscale-0">
                     <div class="flex items-center gap-4 mb-8 border-b border-zinc-100 pb-6">
                         <div class="w-12 h-12 bg-zinc-50 rounded-lg flex items-center justify-center border border-zinc-100">
-                            <!-- Icono Retail -->
                             <svg class="w-6 h-6 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-brand-dark">Supermercados</h3>
@@ -357,11 +278,9 @@
                     </ul>
                 </div>
 
-                <!-- Tarjeta 2: Empresas Procesadoras -->
                 <div class="bg-white p-10 rounded-2xl border border-zinc-200 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl group-hover/cards:opacity-50 group-hover/cards:grayscale hover:!opacity-100 hover:!grayscale-0">
                     <div class="flex items-center gap-4 mb-8 border-b border-zinc-100 pb-6">
                         <div class="w-12 h-12 bg-zinc-50 rounded-lg flex items-center justify-center border border-zinc-100">
-                            <!-- Icono Industria -->
                             <svg class="w-6 h-6 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-brand-dark">Empresas procesadoras</h3>
@@ -406,7 +325,6 @@
         </div>
     </section>
 
-    <!-- BLOQUE 4: FLUJO / PROCESO -->
     <section id="operacion" class="py-32 bg-brand-dark text-white px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="mb-20 text-center reveal">
@@ -414,9 +332,7 @@
                 <p class="text-zinc-400 font-light">Un flujo logístico milimétrico diseñado para el cero error.</p>
             </div>
 
-            <!-- Flujo Horizontal Desktop / Vertical Mobile -->
             <div class="relative reveal">
-                <!-- Línea conectora -->
                 <div class="hidden lg:block absolute top-1/2 left-0 w-full h-[1px] bg-zinc-800 -translate-y-1/2"></div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 relative z-10">
@@ -470,14 +386,12 @@
                 </div>
             </div>
 
-            <!-- Placeholder Foto Proceso -->
             <div class="max-w-4xl mx-auto mt-24 aspect-[21/9] bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex items-center justify-center reveal">
                 <p class="text-zinc-600 font-medium text-sm tracking-wide uppercase">[ FOTOGRAFÍA ALTA GAMA DE SELECCIÓN TÉCNICA / BODEGA ]</p>
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 5: INDICADORES / CREDIBILIDAD -->
     <section class="py-32 bg-white px-6 border-b border-zinc-100">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
@@ -485,7 +399,6 @@
                 <h3 class="text-3xl font-bold text-brand-dark">La confianza se construye con resultados</h3>
             </div>
 
-            <!-- KPIs -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 reveal">
                 <div class="text-center p-6">
                     <div class="text-4xl lg:text-5xl font-light text-brand-dark mb-2">99<span class="text-brand-accent">%</span></div>
@@ -505,7 +418,6 @@
                 </div>
             </div>
 
-            <!-- Logos Placeholders -->
             <div class="text-center reveal">
                 <p class="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-8">Empresas que mantienen su operación con nosotros</p>
                 <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale">
@@ -518,7 +430,6 @@
         </div>
     </section>
 
-    <!-- BLOQUE 6: CTA FINAL -->
     <section id="contacto" class="py-40 bg-brand-light px-6">
         <div class="max-w-3xl mx-auto text-center reveal">
             <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-brand-dark mb-6">Conversemos sobre su operación.</h2>
@@ -552,7 +463,6 @@
         <p>&copy; 2026 ALFRUTEZ. Todos los derechos reservados. Operación diseñada para el éxito corporativo.</p>
     </footer>
 
-    <!-- INTERACCIONES JS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Navbar Scroll Effect
