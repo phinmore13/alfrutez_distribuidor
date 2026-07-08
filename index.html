@@ -103,8 +103,69 @@
         </div>
     </section>
 
+    <!-- BLOQUE 1.5: SOMOS -->
+    <section class="py-32 bg-white px-6 border-b border-zinc-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
+                <!-- Columna Izquierda: Título Institucional -->
+                <div class="lg:col-span-4 reveal">
+                    <h3 class="text-sm font-bold text-zinc-400 tracking-widest uppercase mb-4">Autoridad Corporativa</h3>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-brand-dark leading-tight">
+                        La infraestructura detrás de su tranquilidad.
+                    </h2>
+                </div>
+                
+                <!-- Columna Derecha: Pilares (Grid minimalista) -->
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 reveal" style="transition-delay: 0.1s;">
+                    <!-- Pilar 1 -->
+                    <div class="border-t border-zinc-200 pt-5">
+                        <p class="text-zinc-500 leading-relaxed font-light">
+                            <strong class="font-semibold text-brand-dark block mb-1">Trayectoria Comprobada</strong>
+                            Más de una década abasteciendo supermercados y la industria del procesamiento de aguacate de alta calidad.
+                        </p>
+                    </div>
+                    <!-- Pilar 2 -->
+                    <div class="border-t border-zinc-200 pt-5">
+                        <p class="text-zinc-500 leading-relaxed font-light">
+                            <strong class="font-semibold text-brand-dark block mb-1">Disponibilidad Absoluta</strong>
+                            Líderes de la región en distribución de aguacate, 365 días de operación sin falta de stock.
+                        </p>
+                    </div>
+                    <!-- Pilar 3 -->
+                    <div class="border-t border-zinc-200 pt-5">
+                        <p class="text-zinc-500 leading-relaxed font-light">
+                            <strong class="font-semibold text-brand-dark block mb-1">Enfoque B2B</strong>
+                            Especialistas en selección, clasificación y distribución de aguacate para el canal moderno.
+                        </p>
+                    </div>
+                    <!-- Pilar 4 -->
+                    <div class="border-t border-zinc-200 pt-5">
+                        <p class="text-zinc-500 leading-relaxed font-light">
+                            <strong class="font-semibold text-brand-dark block mb-1">Rigor Metodológico</strong>
+                            Operamos con procesos enfocados en calidad, cumplimiento y continuidad del abastecimiento.
+                        </p>
+                    </div>
+                    <!-- Pilar 5 -->
+                    <div class="border-t border-zinc-200 pt-5">
+                        <p class="text-zinc-500 leading-relaxed font-light">
+                            <strong class="font-semibold text-brand-dark block mb-1">Visión a Largo Plazo</strong>
+                            Construimos relaciones comerciales basadas en confianza, servicio y respuesta oportuna.
+                        </p>
+                    </div>
+                    <!-- Pilar 6 (Acento) -->
+                    <div class="border-t border-brand-accent pt-5">
+                        <p class="text-zinc-500 leading-relaxed font-light">
+                            <strong class="font-semibold text-brand-dark block mb-1">Su Aliado Estratégico</strong>
+                            Más que un proveedor, somos el aliado que garantiza tranquilidad en cada entrega.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- BLOQUE 2: DOS INDUSTRIAS -->
-    <section class="py-32 bg-white relative border-y border-zinc-100">
+    <section class="py-32 bg-white relative border-b border-zinc-100">
         <div class="max-w-7xl mx-auto px-6">
             
             <!-- Badge Central Desktop -->
@@ -297,7 +358,7 @@
                 <h3 class="text-3xl font-bold text-brand-dark">La confianza se construye con resultados</h3>
             </div>
 
-            <!-- KPIs (Editables fácilmente en el HTML) -->
+            <!-- KPIs -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 reveal">
                 <div class="text-center p-6">
                     <div class="text-4xl lg:text-5xl font-light text-brand-dark mb-2">99<span class="text-brand-accent">%</span></div>
@@ -367,7 +428,7 @@
     <!-- INTERACCIONES JS (Vanilla, Moderno, Ligero) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Navbar Scroll Effect (Stripe style)
+            // Navbar Scroll Effect
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 20) {
@@ -377,7 +438,7 @@
                 }
             });
 
-            // Intersection Observer para Animaciones "Reveal" suaves (Apple style)
+            // Intersection Observer para Animaciones "Reveal" suaves
             const revealElements = document.querySelectorAll('.reveal');
             
             const revealOptions = {
