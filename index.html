@@ -39,7 +39,7 @@
         }
     </script>
 
-    <!-- Estilos para animaciones reveal -->
+    <!-- Estilos para animaciones (Reveal y Carrusel Marquee) -->
     <style>
         .reveal {
             opacity: 0;
@@ -54,6 +54,15 @@
             background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        }
+        
+        /* Animación CSS para el Scroll Horizontal Infinito */
+        @keyframes scroll-horizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-scroll-horizontal {
+            animation: scroll-horizontal 40s linear infinite;
         }
     </style>
 </head>
@@ -94,73 +103,145 @@
             </div>
         </div>
 
-        <!-- Placeholder Imagen Editorial -->
+        <!-- Imagen Editorial -->
         <div class="max-w-6xl mx-auto mt-24 reveal relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-zinc-400 rounded-2xl blur opacity-20 transition duration-1000 group-hover:opacity-30"></div>
             <div class="relative aspect-video bg-zinc-200 rounded-xl border border-zinc-300 overflow-hidden flex items-center justify-center">
-                <p class="text-zinc-500 font-medium tracking-wide">[ FOTOGRAFÍA EDITORIAL DE OPERACIÓN LOGÍSTICA / PLANTA / INSPECCIÓN DE CALIDAD ]</p>
+                <img 
+                    src="./img/operacion-alfrutez.png" 
+                    alt="Infraestructura y operación logística de ALFRUTEZ" 
+                    class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    loading="eager"
+                >
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 1.5: SOMOS -->
-    <section class="py-32 bg-white px-6 border-b border-zinc-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
-                <!-- Columna Izquierda: Título Institucional -->
-                <div class="lg:col-span-4 reveal">
-                    <h3 class="text-sm font-bold text-zinc-400 tracking-widest uppercase mb-4">Autoridad Corporativa</h3>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-brand-dark leading-tight">
-                        La infraestructura detrás de su tranquilidad.
-                    </h2>
-                </div>
+    <!-- BLOQUE 1.5: SOMOS (CARRUSEL INFINITO) -->
+    <section class="py-32 bg-white border-b border-zinc-100 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 mb-16 reveal">
+            <h3 class="text-sm font-bold text-zinc-400 tracking-widest uppercase mb-4">Autoridad Corporativa</h3>
+            <h2 class="text-3xl lg:text-4xl font-bold text-brand-dark leading-tight max-w-3xl">
+                La infraestructura detrás de su tranquilidad.
+            </h2>
+        </div>
+
+        <!-- Contenedor del Carrusel -->
+        <div class="relative flex overflow-hidden group reveal" style="transition-delay: 0.1s;">
+            <!-- Máscaras de degradado a los lados para disolver el texto -->
+            <div class="absolute top-0 left-0 h-full w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 h-full w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+            <!-- Set 1 de Tarjetas -->
+            <div class="flex gap-6 pr-6 animate-scroll-horizontal group-hover:[animation-play-state:paused]">
                 
-                <!-- Columna Derecha: Pilares (Grid minimalista) -->
-                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 reveal" style="transition-delay: 0.1s;">
-                    <!-- Pilar 1 -->
-                    <div class="border-t border-zinc-200 pt-5">
-                        <p class="text-zinc-500 leading-relaxed font-light">
-                            <strong class="font-semibold text-brand-dark block mb-1">Trayectoria Comprobada</strong>
-                            Más de una década abasteciendo supermercados y la industria del procesamiento de aguacate de alta calidad.
-                        </p>
+                <!-- Tarjeta 1 -->
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <!-- Pilar 2 -->
-                    <div class="border-t border-zinc-200 pt-5">
-                        <p class="text-zinc-500 leading-relaxed font-light">
-                            <strong class="font-semibold text-brand-dark block mb-1">Disponibilidad Absoluta</strong>
-                            Líderes de la región en distribución de aguacate, 365 días de operación sin falta de stock.
-                        </p>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Trayectoria Comprobada</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Más de una década abasteciendo supermercados y la industria del procesamiento de aguacate de alta calidad.</p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     </div>
-                    <!-- Pilar 3 -->
-                    <div class="border-t border-zinc-200 pt-5">
-                        <p class="text-zinc-500 leading-relaxed font-light">
-                            <strong class="font-semibold text-brand-dark block mb-1">Enfoque B2B</strong>
-                            Especialistas en selección, clasificación y distribución de aguacate para el canal moderno.
-                        </p>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Disponibilidad Absoluta</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Líderes de la región en distribución de aguacate, 365 días de operación sin falta de stock.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     </div>
-                    <!-- Pilar 4 -->
-                    <div class="border-t border-zinc-200 pt-5">
-                        <p class="text-zinc-500 leading-relaxed font-light">
-                            <strong class="font-semibold text-brand-dark block mb-1">Rigor Metodológico</strong>
-                            Operamos con procesos enfocados en calidad, cumplimiento y continuidad del abastecimiento.
-                        </p>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Enfoque B2B</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Especialistas en selección, clasificación y distribución de aguacate para el canal moderno.</p>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <!-- Pilar 5 -->
-                    <div class="border-t border-zinc-200 pt-5">
-                        <p class="text-zinc-500 leading-relaxed font-light">
-                            <strong class="font-semibold text-brand-dark block mb-1">Visión a Largo Plazo</strong>
-                            Construimos relaciones comerciales basadas en confianza, servicio y respuesta oportuna.
-                        </p>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Rigor Metodológico</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Operamos con procesos enfocados en calidad, cumplimiento y continuidad del abastecimiento.</p>
+                </div>
+
+                <!-- Tarjeta 5 -->
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                     </div>
-                    <!-- Pilar 6 (Acento) -->
-                    <div class="border-t border-brand-accent pt-5">
-                        <p class="text-zinc-500 leading-relaxed font-light">
-                            <strong class="font-semibold text-brand-dark block mb-1">Su Aliado Estratégico</strong>
-                            Más que un proveedor, somos el aliado que garantiza tranquilidad en cada entrega.
-                        </p>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Visión a Largo Plazo</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Construimos relaciones comerciales basadas en confianza, servicio y respuesta oportuna.</p>
+                </div>
+
+                <!-- Tarjeta 6 (Acento) -->
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-brand-accent/30 rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(5,150,105,0.05)] hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-brand-accent/10 rounded-full flex items-center justify-center mb-6 border border-brand-accent/20 text-brand-accent">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Su Aliado Estratégico</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Más que un proveedor, somos el aliado que garantiza tranquilidad en cada entrega.</p>
                 </div>
             </div>
+
+            <!-- Set 2 (Duplicado exacto para crear el Loop Infinito sin saltos) -->
+            <div class="flex gap-6 pr-6 animate-scroll-horizontal group-hover:[animation-play-state:paused]" aria-hidden="true">
+                
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Trayectoria Comprobada</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Más de una década abasteciendo supermercados y la industria del procesamiento de aguacate de alta calidad.</p>
+                </div>
+
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Disponibilidad Absoluta</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Líderes de la región en distribución de aguacate, 365 días de operación sin falta de stock.</p>
+                </div>
+
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Enfoque B2B</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Especialistas en selección, clasificación y distribución de aguacate para el canal moderno.</p>
+                </div>
+
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Rigor Metodológico</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Operamos con procesos enfocados en calidad, cumplimiento y continuidad del abastecimiento.</p>
+                </div>
+
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-zinc-200 rounded-2xl p-8 hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-zinc-50 rounded-full flex items-center justify-center mb-6 border border-zinc-100 text-brand-dark">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Visión a Largo Plazo</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Construimos relaciones comerciales basadas en confianza, servicio y respuesta oportuna.</p>
+                </div>
+
+                <div class="w-[85vw] md:w-96 lg:w-[400px] flex-shrink-0 bg-white border border-brand-accent/30 rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(5,150,105,0.05)] hover:shadow-premium transition-all">
+                    <div class="w-10 h-10 bg-brand-accent/10 rounded-full flex items-center justify-center mb-6 border border-brand-accent/20 text-brand-accent">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2">Su Aliado Estratégico</h4>
+                    <p class="text-zinc-500 leading-relaxed font-light text-sm">Más que un proveedor, somos el aliado que garantiza tranquilidad en cada entrega.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -425,7 +506,7 @@
         <p>&copy; 2026 ALFRUTEZ. Todos los derechos reservados. Operación diseñada para el éxito corporativo.</p>
     </footer>
 
-    <!-- INTERACCIONES JS (Vanilla, Moderno, Ligero) -->
+    <!-- INTERACCIONES JS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Navbar Scroll Effect
@@ -438,7 +519,7 @@
                 }
             });
 
-            // Intersection Observer para Animaciones "Reveal" suaves
+            // Intersection Observer para Animaciones "Reveal"
             const revealElements = document.querySelectorAll('.reveal');
             
             const revealOptions = {
