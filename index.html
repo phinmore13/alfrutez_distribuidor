@@ -533,20 +533,23 @@
                     const name = document.getElementById('gate-name').value;
                     const email = document.getElementById('gate-email').value;
 
-                    fetch("https://formsubmit.co/ajax/phinmore@gmail.com", {
+                    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfox0kwTgSXMiKTJZIVFS7UU3ER__rFxlQabxQy6uRIuJe4eA/formResponse";
+                    const ENTRY_NAME = "entry.1960003755";
+                    const ENTRY_EMAIL = "entry.688258905";
+
+                    const formData = new URLSearchParams();
+                    formData.append(ENTRY_NAME, name);
+                    formData.append(ENTRY_EMAIL, email);
+
+                    fetch(GOOGLE_FORM_URL, {
                         method: "POST",
+                        mode: "no-cors",
                         headers: { 
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
+                            'Content-Type': 'application/x-www-form-urlencoded'
                         },
-                        body: JSON.stringify({
-                            _subject: "Nuevo visitante en Landing ALFRUTEZ",
-                            Nombre: name,
-                            Email: email
-                        })
+                        body: formData
                     })
-                    .then(response => response.json())
-                    .then(data => {
+                    .then(() => {
                         gateOverlay.style.opacity = '0';
                         setTimeout(() => {
                             gateOverlay.remove();
