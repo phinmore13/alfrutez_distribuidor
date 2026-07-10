@@ -74,6 +74,30 @@
 </head>
 <body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-accent selection:text-white">
 
+    <div id="booking-modal" class="fixed inset-0 z-[110] hidden items-center justify-center p-4">
+        <div id="modal-overlay" class="absolute inset-0 bg-brand-dark/60 backdrop-blur-md transition-opacity cursor-pointer"></div>
+        <div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-md relative z-10 transform transition-all border border-white/20">
+            <button id="close-modal" class="absolute top-4 right-4 text-zinc-400 hover:text-brand-dark transition-colors">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <h3 class="text-2xl font-bold text-brand-dark mb-1">Agendar Reunión</h3>
+            <p class="text-sm text-zinc-500 mb-6 font-light">Coordinemos el abastecimiento de su operación.</p>
+            
+            <form id="booking-form" class="space-y-4">
+                <input type="text" name="entry.1502316104" placeholder="Nombre completo" required class="w-full px-4 py-3 rounded-lg border border-zinc-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none text-brand-dark">
+                <input type="email" name="entry.481134339" placeholder="Correo electrónico" required class="w-full px-4 py-3 rounded-lg border border-zinc-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none text-brand-dark">
+                <input type="tel" name="entry.2068622286" placeholder="Teléfono" required class="w-full px-4 py-3 rounded-lg border border-zinc-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none text-brand-dark">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="date" name="entry.1501581056" required class="w-full px-4 py-3 rounded-lg border border-zinc-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none text-zinc-600">
+                    <input type="time" name="entry.1983554078" required class="w-full px-4 py-3 rounded-lg border border-zinc-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none text-zinc-600">
+                </div>
+                <button type="submit" id="submit-booking" class="w-full py-3.5 bg-brand-accent text-white rounded-lg font-semibold hover:opacity-90 transition-all mt-4 flex items-center justify-center">
+                    Confirmar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div id="gate-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-white/40 backdrop-blur-xl transition-opacity duration-700">
         <div class="bg-white/80 p-8 md:p-10 rounded-2xl shadow-2xl border border-zinc-200 max-w-md w-full mx-4 transform transition-all">
             <div class="text-center mb-8">
@@ -496,7 +520,7 @@
             <p class="text-lg text-zinc-500 mb-10 font-light">
                 Agende una reunión de 15 minutos con nuestra dirección comercial. Descubra cómo nuestra infraestructura puede optimizar el abastecimiento de su empresa.
             </p>
-            <a href="mailto:alfrutez@hotmail.com" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand-accent rounded-lg hover:opacity-90 transition-all hover:shadow-xl hover:-translate-y-1">
+            <a href="#contacto" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand-accent rounded-lg hover:opacity-90 transition-all hover:shadow-xl hover:-translate-y-1">
                 Agendar una reunión ahora
             </a>
             
@@ -515,9 +539,9 @@
                     <a href="https://www.instagram.com/al_frut_ez/" target="_blank" rel="noopener noreferrer" class="mt-2 text-zinc-400 hover:text-brand-accent transition-colors flex items-center gap-1 text-xs" aria-label="Instagram">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
-                    </svg>
-                    @al_frut_ez
-                </a>
+                        </svg>
+                        @al_frut_ez
+                    </a>
                 </div>
 
                 <span class="hidden md:inline text-zinc-300">|</span>
@@ -535,7 +559,68 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- INICIO LÓGICA DEL FORMULARIO GATE ---
+            
+            // --- INICIO LÓGICA DEL MODAL DE AGENDAMIENTO ---
+            const bookingModal = document.getElementById('booking-modal');
+            const bookingOverlay = document.getElementById('modal-overlay');
+            const closeBookingBtn = document.getElementById('close-modal');
+            const bookingForm = document.getElementById('booking-form');
+            const submitBookingBtn = document.getElementById('submit-booking');
+
+            const openBookingModal = (e) => {
+                e.preventDefault();
+                bookingModal.classList.remove('hidden');
+                bookingModal.classList.add('flex');
+            };
+
+            const closeBookingModal = () => {
+                bookingModal.classList.add('hidden');
+                bookingModal.classList.remove('flex');
+            };
+
+            // Detectar clicks en botones con los textos específicos
+            const triggerPhrases = ["Agendar reunión", "Agendar una conversación", "Conocer nuestra operación", "Agendar una reunión ahora"];
+            
+            document.querySelectorAll('a, button').forEach(el => {
+                if (triggerPhrases.some(phrase => el.textContent.includes(phrase))) {
+                    el.addEventListener('click', openBookingModal);
+                }
+            });
+
+            closeBookingBtn.addEventListener('click', closeBookingModal);
+            bookingOverlay.addEventListener('click', closeBookingModal);
+
+            // Envío a Google Forms
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitBookingBtn.disabled = true;
+                submitBookingBtn.textContent = 'Enviando...';
+
+                const formData = new FormData(bookingForm);
+                const GOOGLE_FORM_BOOKING_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf0stsxq2VKCLLcwkTGezBXQfk69MYN-Y0OSUb7LGCM5lAJQg/formResponse";
+
+                fetch(GOOGLE_FORM_BOOKING_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData
+                })
+                .then(() => {
+                    alert("¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.");
+                    closeBookingModal();
+                    bookingForm.reset();
+                })
+                .catch(err => {
+                    alert("Hubo un error de conexión. Por favor, intenta de nuevo.");
+                })
+                .finally(() => {
+                    submitBookingBtn.disabled = false;
+                    submitBookingBtn.textContent = 'Confirmar solicitud';
+                });
+            });
+            // --- FIN LÓGICA DEL MODAL DE AGENDAMIENTO ---
+
+
+            // --- INICIO LÓGICA DEL FORMULARIO GATE ORIGINAL ---
             document.body.style.overflow = 'hidden';
 
             const gateForm = document.getElementById('gate-form');
@@ -585,7 +670,7 @@
                     });
                 });
             }
-            // --- FIN LÓGICA DEL FORMULARIO GATE ---
+            // --- FIN LÓGICA DEL FORMULARIO GATE ORIGINAL ---
 
             // Navbar Scroll Effect
             const navbar = document.getElementById('navbar');
