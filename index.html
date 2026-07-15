@@ -160,14 +160,12 @@
     </nav>
 
     <section class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 px-6 overflow-hidden bg-grid">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-start reveal text-left">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center reveal text-left">
             <div class="w-full lg:w-3/5 flex flex-col items-start">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-medium text-brand-gray mb-8">
                     <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
                     Operación activa y en cumplimiento
                 </div>
-                
-                <img src="img/Papelillo.png" alt="Papelillo" class="w-48 lg:w-64 mb-6 object-contain">
                 
                 <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-brand-dark mb-8 leading-[1.1]">
                     La confianza que mantiene <br class="hidden lg:block"> su operación en movimiento.
@@ -177,9 +175,15 @@
                     ALFRUTEZ abastece de forma confiable a supermercados y empresas procesadoras con aguacate colombiano seleccionado, respaldado por una operation diseñada para garantizar <strong class="font-medium text-brand-dark">continuidad, calidad y capacidad de respuesta</strong> durante todo el año.
                 </p>
             </div>
+
+            <!-- Nuevo Contenedor Columna Derecha para Imagen -->
+            <div class="w-full lg:w-2/5 flex justify-center lg:justify-end">
+                <img src="./img/Papelillo.png" alt="Papelillo" class="w-64 lg:w-full max-w-md object-contain drop-shadow-2xl">
+            </div>
         </div>
 
-        <div class="max-w-6xl mx-auto mt-24 reveal relative group bg-white/10 p-8 md:p-12 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.15)] border border-white/20 backdrop-blur-[10px]">
+        <!-- Bloque Somos Modificado con Glassmorphism y Más Sombra -->
+        <div class="max-w-6xl mx-auto mt-24 reveal relative group bg-white/70 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-white/50">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-zinc-400 rounded-3xl blur opacity-10 pointer-events-none"></div>
             <h3 class="text-3xl lg:text-4xl font-bold text-brand-dark mb-6 relative z-10">Somos</h3>
             <div class="relative z-10 h-[300px] md:h-[250px] overflow-y-auto pr-6 custom-scrollbar" id="somos-scroll-container">
@@ -321,7 +325,7 @@
     <section class="py-32 bg-brand-light px-6">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 reveal text-center">
-                <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-brand-dark mb-4" id="titulo-segmentos">La diferencia entre ambos segmentos</h2>
+                <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-brand-dark mb-4">La diferencia entre ambos segmentos</h2>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 group/cards reveal">
@@ -415,11 +419,11 @@
                 </div>
             </div>
 
-            <!-- Nuevo bloque Desplegable: Oferta Comercial -->
+            <!-- Bloque Desplegable Modificado: Tamaño de Título Ajustado -->
             <div class="mt-16 w-full bg-white border border-zinc-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow reveal">
                 <details class="group">
-                    <summary class="flex items-center justify-between cursor-pointer p-6 bg-zinc-50 font-bold text-xl text-brand-dark hover:bg-zinc-100 transition-colors rounded-t-2xl">
-                        <span class="text-3xl lg:text-4xl font-bold text-brand-dark">Nuestra oferta comercial</span>
+                    <summary class="flex items-center justify-between cursor-pointer p-6 bg-zinc-50 font-bold text-3xl lg:text-4xl text-brand-dark hover:bg-zinc-100 transition-colors rounded-t-2xl">
+                        Nuestra oferta comercial
                         <span class="transition group-open:rotate-180">
                             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                         </span>
